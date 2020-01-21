@@ -23,47 +23,53 @@ npm run lint
 ## Themen
 
 - JavaScript Basics
+   - syntax
+   - typen
    - typ konviertierungen
-   - object keys always stringified
    - truthiness
-   - vererbung?!
-   - reduce
-   - promises
-   - type conversions
-   - functional stuff (closures, )
+   - functional stuff (closures, callbacks)
    - this scoping
+   - object keys always stringified
+
+   - vererbung?!
 - ECMAScript Neuerungen
-   - JSON parse/stringify
-   - getters/setters
-   - map/set
-   - async/await
-   - function scope/var/let/const
-   - spread syntax
    - modules
       - strict eingebaut
+      - import/export
+   - function scope/var/let/const
    - arrow fns
-   - classes?
-   - object prop shorthand
-   - template strings
    - destructuring
+   - object prop shorthand
+   - spread syntax
+   - template strings
+   - JSON parse/stringify
+   - async/await
    - default params
-   - generators
+
+   - promises
+   - map/set
+   - classes?
+   - getters/setters
    - symbols
+   - generators
 - stdlib
    - join
    - split
+   - reduce
    - regex
    - iterate objects
 - unit tests
 - debugging
 - vue
    - filter
-- vuex, router
+- vuex
+- vue router
 - vue dev extension
 
 
-
-devdocs.io
+## Resources
+ - devdocs.io
+ - mdn
 
 https://i.redd.it/h7nt4keyd7oy.jpg
 https://www.destroyallsoftware.com/talks/wat
