@@ -1,0 +1,29 @@
+{
+   "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue"
+   ],
+   "telemetry.enableTelemetry": false,
+   "editor.formatOnType": true,
+   "editor.tabSize": 3,
+   "editor.renderWhitespace": "boundary",
+   "editor.wordWrapColumn": 120,
+   "emmet.triggerExpansionOnTab": true,
+   "[html]": {
+      "editor.tabSize": 3
+   },
+   "vetur.format.options.tabSize": 3,
+   "vetur.completion.tagCasing": "initial",
+   "window.zoomLevel": 0,
+   "vetur.format.defaultFormatter.js": "vscode-typescript",
+   "vetur.format.defaultFormatterOptions": {
+      "prettyhtml": {
+         "printWidth": 120,
+         "wrapAttributes": true
+      }
+   },
+   "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+   }
+}
