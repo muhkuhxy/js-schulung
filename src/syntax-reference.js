@@ -1,4 +1,4 @@
-/* eslint-disable no-alert, no-console, no-unused-vars */
+/* eslint-disable no-alert, no-console, no-unused-vars, prefer-template */
 
 // single line comment
 
@@ -25,9 +25,9 @@ const number = 123.456; // decimal is optional
 
 const bools = true; // or false
 
-const arrays = [ 'values can have different types', true, 789 ];
+const anArray = [ 'values can have different types', true, 789 ];
 
-const objects = {
+const anObject = {
    keysCanBeUnquoted: true,
    'unless_they_contain_special_characters': {
       nestedObjects: []
@@ -41,15 +41,34 @@ const defaultValue = undefined;
 const billionDollarMistake = null;
 
 
+/* accessing arrays and objects */
+
+// by index
+const zeroBased = anArray[ 0 ];
+
+// iteration
+for( const i of anArray ) {
+   console.log( i );
+}
+
+// objects: by key or using [] syntax
+const nestedAccess = anObject.keysCanBeUnquoted[ 'unless_they_contain_special_characters' ].nestedObjects;
+
+
 /* math */
 
 const two = 1 + 1; // minus works as you would expect
 const four = 2 * 2;
 const fourtyTwo = 126 / 3;
 
+// + is also used for string concatenation
+const world = 'World';
+const hw = 'Hello ' + world;
+
 
 /* equality, conditionals */
 
+/* ALWAYS use === or !== except when checking for null or undefined */
 if( four === 4 ) {
    console.log( 'all is well' );
 }
@@ -60,10 +79,8 @@ else {
    alert( 'the universe is very broken' );
 }
 
-/* ALWAYS use === or !== except when checking for null or undefined */
-
 if( billionDollarMistake == null ) {
-   // true if two is null or undefined
+   // true if two is null or if it's undefined
 }
 else if( defaultValue === undefined ) {
    // but eslint wants you to use === for undefined
@@ -81,21 +98,6 @@ const cube = function( x ) {
    const cubed = x * x * x;
    return cubed;
 };
-
-// const and let variables are block scoped, so the code below throws
-// error: cubed is not defined
-// if( cubed == null ) {
-// }
-
-// functions can be passed as parameters
-
-const numbers = [ 1, 2, 3 ];
-
-numbers.map( square );
-// -> [1, 4, 9]
-
-numbers.map( cube );
-// -> [1, 8, 27]
 
 // calling a function
 const nine = square( 3 );
