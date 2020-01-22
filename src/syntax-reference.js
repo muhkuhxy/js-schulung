@@ -60,6 +60,7 @@ const nestedAccess = anObject.keysCanBeUnquoted[ 'unless_they_contain_special_ch
 const two = 1 + 1; // minus works as you would expect
 const four = 2 * 2;
 const fourtyTwo = 126 / 3;
+const remainder = 7 % 2; // modulo
 
 // + is also used for string concatenation
 const world = 'World';

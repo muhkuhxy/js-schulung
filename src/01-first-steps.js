@@ -30,7 +30,7 @@ Example:
 > displayEnumValue('J')
 -> 'Jointly held'
 
-> displayEnumValue('Anything else')
+> displayEnumValue('whatever')
 -> null
 */
 
@@ -56,8 +56,42 @@ Example:
 function sum() {}
 
 
+/*
+Excercise 4:
+Implement FizzBuzz: Write a function `FizzBuzz`, that returns an array with the numbers 1 to 100, but:
+- If a number is divisible by 3, use 'Fizz' instead of the number
+- If a number is divisible by 5, use 'Buzz' instead of the number
+- If a number is divisible by both 3 and 5, print 'FizzBuzz' instead of the number
+
+Hint: print using `console.log( someValue )`
+
+Example:
+> FizzBuzz()
+-> [
+      1,
+      2,
+      'Fizz',
+      4,
+      'Buzz',
+      'Fizz',
+      7,
+      8,
+      'Fizz',
+      'Buzz',
+      11,
+      'Fizz',
+      13,
+      14,
+      'FizzBuzz',
+      ...
+   ]
+*/
+
+function fizzBuzz() {}
+
 export {
    greet,
    displayEnumValue,
-   sum
+   sum,
+   fizzBuzz
 };
