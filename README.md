@@ -27,8 +27,8 @@ npm run lint
    - typen
    - typ konviertierungen
    - truthiness
-   - functional stuff (closures, callbacks)
    - this scoping
+   - functional stuff (closures, callbacks)
    - object keys always stringified
 
    - vererbung?!
@@ -71,5 +71,4 @@ npm run lint
  - devdocs.io
  - mdn
 
-https://i.redd.it/h7nt4keyd7oy.jpg
 https://www.destroyallsoftware.com/talks/wat

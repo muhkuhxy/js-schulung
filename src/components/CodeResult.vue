@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div class="CodeResult">
       Code:
       <vue-code-highlight>{{ code }}</vue-code-highlight>Result:
       <pre
