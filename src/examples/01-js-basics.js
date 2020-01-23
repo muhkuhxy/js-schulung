@@ -102,3 +102,29 @@ const cube = function( x ) {
 
 // calling a function
 const nine = square( 3 );
+
+
+////////////////////////
+// SLIDE CODE //////////
+////////////////////////
+
+const toBoolean = !!123;
+
+const toString = 123 + '';
+
+const toInt = parseInt( '123', 10 );
+const toFloat = parseFloat( '12.34' );
+const toNumber = Number( '123' );
+// Vorsicht vor NaN!
+
+const text = 'asd';
+if( text ) {
+   // code
+}
+
+
+// Falsy
+false, 0, '', null, undefined, NaN;
+
+// Jeder andere Wert (!) ist truthy, z.B.:
+[], {}, 1, '0', 'null'; // etc.
