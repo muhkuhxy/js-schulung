@@ -68,7 +68,7 @@
 <script>
 import { component as VueCodeHighlight } from 'vue-code-highlight';
 import 'vue-code-highlight/themes/prism-tomorrow.css';
-import { greet, displayEnumValue, sum, fizzBuzz } from '@/01-first-steps';
+import { g as greet, displayEnumValue, sum, fizzBuzz } from '@/01-first-steps';
 import CodeResult from '@/components/CodeResult';
 import { range } from '@/lib';
 

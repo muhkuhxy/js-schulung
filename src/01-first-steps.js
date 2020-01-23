@@ -90,7 +90,7 @@ Example:
 function fizzBuzz() {}
 
 export {
-   greet,
+   greet as g,
    displayEnumValue,
    sum,
    fizzBuzz

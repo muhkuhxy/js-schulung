@@ -1,16 +1,13 @@
 
 /*
 Exercise 1: Implement function adviser
+It should take a single paramter `names`, which is an object with keys `firstName` and `lastName`.
+It should return an object with the following properties:
+- fullName: method that returns firstName and lastName concatenated
+- clients: array of the adviser's clients
+- addClient: method that takes the client's name and adds it to the adviser's client list
+- isAdviserOfTheMonth: method checks if the client list is greater than 5
 */
-
-/**
- * @param {Object} names object with keys `firstName` and `lastName`
- * @return {Object} an object with the following properties:
- * - fullName: method that returns firstName and lastName concatenated
- * - clients: array of the adviser's clients
- * - addClient: method that takes the client's name and adds it to the adviser's client list
- * - isAdviserOfTheMonth: method checks if the client list is greater than 5
- */
 function adviser( names ) {}
 
 /*
@@ -46,12 +43,20 @@ Subsequently, change your implementation of `findAdviserByName` to use `findAdvi
 function findAdviser( advisers, predicateFunction ) {}
 
 /*
-Exercise 5: Change implementation of findAdviser to use the builtin method `filter` on arrays.
+Exercise 5: Change implementation of findAdviser to use the builtin method `filter` defined on arrays.
 */
+
+/*
+Exercise 6: Implement function `getNames`.
+It should take an array of advisers and return an array of full names.
+Hint: Use the builtin method `map` defined on arrays.
+*/
+function getNames( advisers ) { }
 
 export {
    adviser,
    findAdviser,
-   findAdviserByName
+   findAdviserByName,
+   getNames
 };
 
