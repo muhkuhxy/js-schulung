@@ -3,8 +3,8 @@ import VueRouter from 'vue-router';
 import Home from './views/Home.vue';
 import Exercise1 from '@/components/Exercise1';
 import Exercise2 from '@/components/Exercise2';
-import Exercise3 from '@/components/Exercise3';
 import CaseSelectionMVP from '@/components/CaseSelectionMVP';
+import CaseSelectionView from '@/views/CaseSelectionView';
 
 Vue.use( VueRouter );
 
@@ -25,14 +25,14 @@ const routes = [
       component: Exercise2
    },
    {
-      path: '/exercise3',
-      name: 'ex3',
-      component: Exercise3
-   },
-   {
       path: '/case-selection-mvp',
       name: 'ex4',
       component: CaseSelectionMVP
+   },
+   {
+      path: '/case-selection-view',
+      name: 'ex5',
+      component: CaseSelectionView
    }
 ];
 
