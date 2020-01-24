@@ -13,7 +13,9 @@ Example:
 -> 'Hello, Horst'
 */
 
-function greet() {}
+function greet( adviser ) {
+   return 'Hello, ' + ( adviser ? adviser : 'Adviser' );
+}
 
 
 /*
@@ -35,7 +37,13 @@ Example:
 -> null
 */
 
-function displayEnumValue() {}
+function displayEnumValue( key ) {
+   return {
+      C: 'Main client',
+      S: 'Spouse/Partner',
+      J: 'Jointly held'
+   }[ key ];
+}
 
 
 /*
@@ -54,7 +62,13 @@ Example:
 -> 3
 */
 
-function sum() {}
+function sum( values ) {
+   let summed = 0;
+   for( const value of values ) {
+      summed += value;
+   }
+   return summed;
+}
 
 
 /*
@@ -88,7 +102,26 @@ Example:
 ]
 */
 
-function fizzBuzz() {}
+function fizzBuzz() {
+   const result = [];
+   let i = 1;
+   while( i <= 100 ) {
+      if( i % 15 === 0 ) {
+         result.push( 'FizzBuzz' );
+      }
+      else if( i % 3 === 0 ) {
+         result.push( 'Fizz' );
+      }
+      else if( i % 5 === 0 ) {
+         result.push( 'Buzz' );
+      }
+      else {
+         result.push( i );
+      }
+      i++;
+   }
+   return result;
+}
 
 export {
    greet as g,

@@ -9,7 +9,24 @@ It should return an object with the following properties:
 - addClient: method that takes the client's name and adds it to the adviser's client list
 - isAdviserOfTheMonth: method checks if the client list is greater than 5
 */
-function adviser( names ) { }
+function adviser( names ) {
+   const clients = [];
+   return {
+      fullName: function() {
+         return names.firstName + ' ' + names.lastName;
+      },
+      clients: clients,
+      addClient: function( name ) {
+         clients.push( name );
+      },
+      isAdviserOfTheMonth: function() {
+         return clients.length >= 5;
+      },
+      nameContains: function( search ) {
+         return this.fullName().includes( search );
+      }
+   };
+}
 
 /*
 Exercise 1.5: Add unit tests for `adviser`.
@@ -46,7 +63,15 @@ It should search the given array for advisers whose name contains the given stri
 return an array of matching objects.
 */
 
-function findAdviserByName( advisers, searchString ) {}
+function findAdviserByName( advisers, searchString ) {
+   const result = [];
+   for( const adviser of advisers ) {
+      if( adviser.fullName().includes( searchString ) ) {
+         result.push( adviser );
+      }
+   }
+   return result;
+}
 
 /*
 Exercise 4: Implement function `findAdviser`. It's more general than `findAdviserByName` as it should take
@@ -55,18 +80,39 @@ Subsequently, change your implementation of `findAdviserByName` to use `findAdvi
 */
 
 // predicateFunction is something like `function( adviser ) { return adviser.isAdviserOfTheMonth() }`
-function findAdviser( advisers, predicateFunction ) {}
+function findAdviser( advisers, predicateFunction ) {
+   const result = [];
+   for( const adviser of advisers ) {
+      if( predicateFunction( adviser ) ) {
+         result.push( adviser );
+      }
+   }
+   return result;
+}
+
+function findAdviserByName2( advisers, searchString ) {
+   return findAdviser( advisers, adviser => {
+      return adviser.fullName().includes( searchString );
+   } );
+}
+
 
 /*
 Exercise 5: Change implementation of findAdviser to use the builtin method `filter` defined on arrays.
 */
+function findAdviserFilter( advisers, predicateFunction ) {
+   return advisers.filter( predicateFunction );
+}
+
 
 /*
 Exercise 6: Implement function `getNames`.
 It should take an array of advisers and return an array of full names.
 Hint: Use the builtin method `map` defined on arrays.
 */
-function getNames( advisers ) { }
+function getNames( advisers ) {
+   return advisers.map( function( adviser ) { return adviser.fullName(); } );
+}
 
 export {
    adviser,
