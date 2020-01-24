@@ -2,7 +2,7 @@
    <div>
       <h1>Case Selection MVP</h1>
       <p>
-         Hello, Horst! <!-- replace with the current advisers name -->
+         Hello, {{ currentAdviser.firstName }}! <!-- replace with the current advisers name -->
       </p>
       <h2>Clients</h2>
       <table class="table">
@@ -17,15 +17,10 @@
             <!-- use v-for to iterate over the clients:
                https://vuejs.org/v2/guide/list.html
             -->
-            <tr>
-               <td>1234</td>
-               <td>Jai Wilks</td>
+            <tr v-for="client in clients" :key="client.clientId">
+               <td>{{ client.clientId }}</td>
+               <td>{{ client.name }}</td>
                <td><button class="btn btn-primary">New</button></td>
-            </tr>
-            <tr>
-               <td>5678</td>
-               <td>Evan Smith</td>
-               <td><button>Resume</button></td>
             </tr>
          </tbody>
       </table>
@@ -49,6 +44,12 @@ export default {
       // Load the current adviser and his clients.
       // You will need to load all advisers to
       // look up the name of the current adviser.
+      const advisers = await loadAdvisers();
+      const { id } = await getCurrentAdviser();
+      this.currentAdviser = advisers.find( x => x.id === id );
+      const clients = await getClients( id );
+      this.clients = clients;
    }
+
 };
 </script>
