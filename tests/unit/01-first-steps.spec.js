@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { greet, displayEnumvalue, sum, fizzBuzz } from '@/01-first-steps';
+import { g as greet, displayEnumValue, sum, fizzBuzz } from '@/01-first-steps';
 import { range } from '@/lib';
 
 describe( 'the greet function', () => {
@@ -22,7 +22,7 @@ describe( 'the displayEnumValue function', () => {
       J: 'Jointly held'
    };
    Object.keys( mapping ).forEach( key => it( `maps ${key} to ${mapping[ key ]}`, () => {
-      expect( displayEnumvalue( key ) ).toBe( mapping[ key ] );
+      expect( displayEnumValue( key ) ).toBe( mapping[ key ] );
    } ) );
 } );
 
