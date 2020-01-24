@@ -20,7 +20,7 @@ export default {
    props: {
       code: String,
       expected: [ String, Object, Array, Number, Boolean ],
-      result: Object
+      result: [ String, Object, Array, Number, Boolean ]
    },
    computed: {
       asExpected() {

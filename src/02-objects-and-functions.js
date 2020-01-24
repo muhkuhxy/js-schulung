@@ -1,3 +1,4 @@
+/*eslint prefer-template: off, object-shorthand: off, prefer-arrow-callback: off */
 
 /*
 Exercise 1: Implement function adviser

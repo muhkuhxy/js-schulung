@@ -1,3 +1,4 @@
+/*eslint prefer-template: off */
 
 /*
 Excercise 1:

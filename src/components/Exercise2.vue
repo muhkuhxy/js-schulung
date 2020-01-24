@@ -41,12 +41,12 @@ fritz.isAdviserOfTheMonth()`"
          <h2>Exercise 2</h2>
          <CodeResult
             :code="`fritz.nameContains( 'itz' )`"
-            expected="true"
+            :expected="true"
             :result="fritz.nameContains( 'itz' )"
          />
          <CodeResult
             :code="`fritz.nameContains( 'utz' )`"
-            expected="false"
+            :expected="false"
             :result="fritz.nameContains( 'utz' )"
          />
       </section>
@@ -54,7 +54,7 @@ fritz.isAdviserOfTheMonth()`"
          <h2>Exercise 3</h2>
          <CodeResult
             code="findAdviserByName( [ horst, fritz ], 'nix' )"
-            expected="[]"
+            :expected="[]"
             :result="findAdviserByName( 'nix' )"
          />
          <CodeResult
@@ -74,7 +74,7 @@ fritz.isAdviserOfTheMonth()`"
             :code="`findAdviser( [ horst, fritz ], function( adviser ) {
    return adviser.isAdviserOfTheMonth()
 } )`"
-            :expected="[ fritz ]"
+            :expected="[ adviserOTM ]"
             :result="findAdviserOTM"
          />
       </section>
