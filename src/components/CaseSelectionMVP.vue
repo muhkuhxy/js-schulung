@@ -40,12 +40,11 @@ export default {
       // to be reactive, properties have to exist from the very beginning
       // https://vuejs.org/v2/guide/reactivity.html
       return {
-         // TODO klappt das mit null?
          currentAdviser: null,
          clients: []
       };
    },
-   created() {
+   async created() {
       // Hook for when the component is loaded.
       // Load the current adviser and his clients.
       // You will need to load all advisers to

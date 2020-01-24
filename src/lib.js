@@ -66,7 +66,7 @@ const clients = [
    {
       clientId: 987,
       name: 'Jack Clark',
-      adviser: 'faschmitz',
+      adviser: 'fschmitz',
       factFindId: 4,
       personalDetails: {
          occupation: 'plumber',
@@ -76,7 +76,7 @@ const clients = [
    {
       clientId: 654,
       name: 'Peter Parker',
-      adviser: 'faschmitz',
+      adviser: 'fschmitz',
       factFindId: 5,
       personalDetails: {
          occupation: 'reporter',
@@ -86,7 +86,7 @@ const clients = [
    {
       clientId: 321,
       name: 'Steve Rogers',
-      adviser: 'faschmitz',
+      adviser: 'fschmitz',
       factFindId: 6,
       personalDetails: {
          occupation: 'soldier',
