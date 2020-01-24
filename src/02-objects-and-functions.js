@@ -53,7 +53,7 @@ an array of advisers and a function which takes a single adviser and returns if 
 Subsequently, change your implementation of `findAdviserByName` to use `findAdviser`.
 */
 
-// predicateFunction is something like `function( adviser ) { return adviser.isAdviserOfTheMonth }`
+// predicateFunction is something like `function( adviser ) { return adviser.isAdviserOfTheMonth() }`
 function findAdviser( advisers, predicateFunction ) {}
 
 /*
