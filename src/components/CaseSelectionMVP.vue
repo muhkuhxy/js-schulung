@@ -2,7 +2,7 @@
    <div>
       <h1>Case Selection MVP</h1>
       <p>
-         Hello, {{ currentAdviser.firstName }}! <!-- replace with the current advisers name -->
+         Hello, {{ adviserName }}! <!-- replace with the current advisers name -->
       </p>
       <h2>Clients</h2>
       <table class="table">
@@ -20,7 +20,7 @@
             <tr v-for="client in clients" :key="client.clientId">
                <td>{{ client.clientId }}</td>
                <td>{{ client.name }}</td>
-               <td><button class="btn btn-primary">New</button></td>
+               <td><button @click="gotoFactFind(client.clientId)" class="btn btn-primary">New</button></td>
             </tr>
          </tbody>
       </table>
@@ -39,6 +39,11 @@ export default {
          clients: []
       };
    },
+   computed: {
+      adviserName() {
+         return this.currentAdviser && this.currentAdviser.firstName;
+      }
+   },
    async created() {
       // Hook for when the component is loaded.
       // Load the current adviser and his clients.
@@ -49,6 +54,11 @@ export default {
       this.currentAdviser = advisers.find( x => x.id === id );
       const clients = await getClients( id );
       this.clients = clients;
+   },
+   methods: {
+      gotoFactFind( clientId ) {
+         this.$router.push( { name: 'factFind', params: { clientId } } );
+      }
    }
 
 };

@@ -107,12 +107,9 @@ export function getClients( adviserId ) {
 
 export function getFactFindData( clientId ) {
    return promise(
-      clients.find( _ => _.clientId === parseInt( clientId, 10 ) )
+      clients.filter( _ => _.clientId === parseInt( clientId, 10 ) )
          .map( _ => {
             const { factFindId, personalDetails } = _;
             return { factFindId, personalDetails };
-         } )
-
-   );
-
+         } )[ 0 ] );
 }

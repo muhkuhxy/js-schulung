@@ -5,6 +5,7 @@ import Exercise1 from '@/components/Exercise1';
 import Exercise2 from '@/components/Exercise2';
 import CaseSelectionMVP from '@/components/CaseSelectionMVP';
 import CaseSelectionView from '@/views/CaseSelectionView';
+import FactFindMVP from '@/components/FactFindMVP';
 
 Vue.use( VueRouter );
 
@@ -33,6 +34,11 @@ const routes = [
       path: '/case-selection-view',
       name: 'ex5',
       component: CaseSelectionView
+   },
+   {
+      path: '/fact-find/:clientId',
+      name: 'factFind',
+      component: FactFindMVP
    }
 ];
 

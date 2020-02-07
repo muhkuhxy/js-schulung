@@ -15,7 +15,7 @@
    },
    "vetur.format.options.tabSize": 3,
    "vetur.completion.tagCasing": "initial",
-   "window.zoomLevel": 2,
+   "window.zoomLevel": 0,
    "vetur.format.defaultFormatter.js": "vscode-typescript",
    "vetur.format.defaultFormatterOptions": {
       "prettyhtml": {

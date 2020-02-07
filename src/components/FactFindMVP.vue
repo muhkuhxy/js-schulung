@@ -1,3 +1,29 @@
+<template>
+   <div v-if="factFind">
+      <h1>Fact Find</h1>
+      <div>Fact Find ID: {{ factFind.factFindId }}</div>
+      <div>Occupation: {{ factFind.personalDetails.occupation }}</div>
+      <div>Date of birth: {{ factFind.personalDetails.birthDate }}</div>
+   </div>
+</template>
+
+<script>
+import { getFactFindData } from '../lib';
+
+export default {
+   data() {
+      return {
+         factFind: null
+      };
+   },
+   async created() {
+      const { clientId } = this.$route.params;
+      this.factFind = await getFactFindData( clientId );
+   }
+};
+</script>
+
+
 Implement this component.
 It should be shown under the route `/fact-find/:clientId` and
 load and display the small set of set of fact find data returned
